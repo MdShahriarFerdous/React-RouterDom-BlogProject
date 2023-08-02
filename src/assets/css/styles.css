@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+nav {
+	height: 10vh;
+	background-color: #48639c;
+	color: white;
+}
+nav .nav-link {
+	font-size: 1.2rem;
+}
+
+nav .nav-link:hover {
+	color: #f7996e;
+}
+
+nav .active-link {
+	color: #f7996e;
+}
+nav .pending-link {
+	color: white;
+}
+
+/* Additional CSS to remove Bootstrap's default styles for active and focus states */
+nav .nav-link:focus,
+nav .nav-link:active,
+nav .nav-link.active {
+	color: #f7996e;
+}
+
+h1 {
+	margin: 24px 0;
+}
+.container .navbar-brand {
+	font-size: 2rem;
+	color: white;
+	font-weight: 600;
+}
+
+.content-div {
+	background-color: #dcdcf5;
+}
+.blog-title-link {
+	text-decoration: none;
+	color: #4c4c9d;
+	font-weight: bold;
+}
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.container form input {
+	padding: 0.5rem;
+	width: 355px;
+	margin: 4px;
+}
+.container form span {
+	color: red;
+}
+
+@media (max-width: 1000px) {
+	nav.navbar {
+		background-color: #48639c;
+	}
+	nav.navbar .navbar-toggler-icon {
+		background-color: #48639c;
+	}
+
+	nav.navbar .navbar-collapse {
+		background-color: #48639c;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+}

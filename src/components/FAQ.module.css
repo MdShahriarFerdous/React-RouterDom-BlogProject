@@ -1,0 +1,35 @@
+.faqdiv {
+	background-color: rgb(241, 247, 250);
+	max-width: 70%;
+	margin: 1.5rem auto;
+	padding: 1.8rem;
+	box-shadow: 0 5px 10px rgba(29, 88, 139, 0.15);
+	border-radius: 4px;
+	font-family: sans-serif;
+}
+
+.faqheading {
+	display: flex;
+	justify-content: space-between;
+}
+.faqheading h4,
+.icon {
+	color: rgb(63, 63, 63);
+}
+.faqheading h4 span {
+	margin-right: 12px;
+}
+.icon {
+	font-size: 1.6rem;
+}
+.item {
+	border-top: 4px solid rgb(15, 86, 148);
+}
+.desc {
+	margin-top: 12px;
+}
+.item .icon,
+.item .faqheading h4 {
+	color: rgb(15, 86, 148);
+	font-weight: bold;
+}

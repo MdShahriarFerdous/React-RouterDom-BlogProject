@@ -1,0 +1,47 @@
+** Caching by useRef()
+import React, { useRef } from "react";
+
+const App = () => {
+	const APIData = useRef(null); //caching
+	const data = useRef();
+
+	const fetchAPI = async () => {
+		const fetchingData = await fetch("https://dummyjson.com/products");
+		APIData.current = await fetchingData.json();
+	};
+
+	const showAPI = () => {
+		data.current.innerHTML = JSON.stringify(APIData.current);
+	};
+
+	return (
+		<div>
+			<p ref={data}></p>
+			<button onClick={fetchAPI}>Fetch API</button>
+			<button onClick={showAPI}>Show API</button>
+		</div>
+	);
+};
+
+export default App;
+
+	// useEffect(() => {
+		// ---------------async - await------------
+		// (async () => {
+		// 	let response = await fetch(
+		// 		"https://jsonplaceholder.typicode.com/todos"
+		// 	);
+		// 	let jsonData = await response.json();
+		// 	setTodos(jsonData);
+		// 	console.log(jsonData);
+		// })();
+
+		// ---------------promises-----------------------
+		// fetch("https://jsonplaceholder.typicode.com/todos")
+		// 	.then((res) => {
+		// 		return res.json();
+		// 	})
+		// 	.then((jsonData) => {
+		// 		setTodos(jsonData);
+		// 	});
+	// }, []);

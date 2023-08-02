@@ -1,0 +1,19 @@
+import React from "react";
+import { useParams } from "react-router-dom";
+
+import BlogDatas from "../data";
+
+const Blog = () => {
+	const { title } = useParams();
+	const titleData = BlogDatas.find((blog) => {
+		return blog.title === title;
+	});
+	return (
+		<div className="container">
+			<h1 className="my-5">{title}</h1>
+			<p>{titleData.body}</p>
+		</div>
+	);
+};
+
+export default Blog;
